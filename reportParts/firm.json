@@ -1,0 +1,1548 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "firm_panel-d0805199-280d-4729-9da4-e5685fff2c82",
+      "properties": {
+        "_id": "d0805199-280d-4729-9da4-e5685fff2c82",
+        "properties": {
+          "gfid": "234468a8-df24-43c8-8c29-21a20468437e",
+          "panel": "0205",
+          "pcomm": "177C",
+          "scale": "12000",
+          "suffix": "D",
+          "firm_id": "48177C_37",
+          "st_fips": "48",
+          "base_typ": "Vector",
+          "dfirm_id": "48177C",
+          "eff_date": "20200122",
+          "firm_pan": "48177C0205D",
+          "objectid": 1850,
+          "pre_date": "99990909",
+          "panel_typ": "Countywide, Panel Printed",
+          "pnp_reason": "",
+          "shape_area": 0.003906243906252595,
+          "source_cit": "48177C_STUDY2",
+          "version_id": "2.3.3.3",
+          "shape_length": 0.2499998050000551
+        },
+        "reference__id": "4bd8198c-8d55-434f-b25b-f8503ac6128c",
+        "transect_feature_type": "firm_panel",
+        "transect_summary": {
+          "location": "aoi",
+          "area": {
+            "meters": 9018686.402532361,
+            "feet": 97076332.51587434,
+            "miles": 3.481212951377491,
+            "acres": 2228.5625034977593
+          },
+          "length": { "miles": 7.469289501912925, "feet": 39437.8498321114 },
+          "center": {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+              "type": "Point",
+              "coordinates": [-97.60817800000001, 29.577555]
+            }
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-97.625, 29.5625],
+            [-97.625, 29.59261],
+            [-97.592927, 29.588961],
+            [-97.592602, 29.588897],
+            [-97.592295, 29.588782],
+            [-97.592018, 29.58862],
+            [-97.591781, 29.588416],
+            [-97.59159, 29.588178],
+            [-97.591453, 29.587914],
+            [-97.591374, 29.587632],
+            [-97.591356, 29.587342],
+            [-97.592457, 29.5625],
+            [-97.625, 29.5625]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "firm_panel-783763d1-bba0-46c5-a36c-8597e83b3a4b",
+      "properties": {
+        "_id": "783763d1-bba0-46c5-a36c-8597e83b3a4b",
+        "properties": {
+          "gfid": "234468a8-df24-43c8-8c29-21a20468437e",
+          "panel": "0350",
+          "pcomm": "177C",
+          "scale": "24000",
+          "suffix": "C",
+          "firm_id": "48177C_12",
+          "st_fips": "48",
+          "base_typ": "Vector",
+          "dfirm_id": "48177C",
+          "eff_date": "20101203",
+          "firm_pan": "48177C0350C",
+          "objectid": 1854,
+          "pre_date": "99990909",
+          "panel_typ": "Countywide, Panel Printed",
+          "pnp_reason": "",
+          "shape_area": 0.015625294562445154,
+          "source_cit": "48177C_STUDY1",
+          "version_id": "1.1.1.0",
+          "shape_length": 0.4999998493785094
+        },
+        "reference__id": "4bd8198c-8d55-434f-b25b-f8503ac6128c",
+        "transect_feature_type": "firm_panel",
+        "transect_summary": {
+          "location": "aoi",
+          "area": {
+            "meters": 150795253.7235235,
+            "feet": 1623146602.3887925,
+            "miles": 58.20696793728007,
+            "acres": 37262.261171351274
+          },
+          "length": { "miles": 30.492308186450046, "feet": 160999.39237643665 },
+          "center": {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+              "type": "Point",
+              "coordinates": [-97.6875, 29.4426005]
+            }
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-97.625, 29.5],
+            [-97.625, 29.385196],
+            [-97.75, 29.388081],
+            [-97.75, 29.5],
+            [-97.6875, 29.500005],
+            [-97.625, 29.5]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "firm_panel-85cbdd80-6846-4a82-a8eb-65556dd5068d",
+      "properties": {
+        "_id": "85cbdd80-6846-4a82-a8eb-65556dd5068d",
+        "properties": {
+          "gfid": "234468a8-df24-43c8-8c29-21a20468437e",
+          "panel": "0215",
+          "pcomm": "177C",
+          "scale": "12000",
+          "suffix": "D",
+          "firm_id": "48177C_39",
+          "st_fips": "48",
+          "base_typ": "Vector",
+          "dfirm_id": "48177C",
+          "eff_date": "20200122",
+          "firm_pan": "48177C0215D",
+          "objectid": 1855,
+          "pre_date": "99990909",
+          "panel_typ": "Countywide, Panel Printed",
+          "pnp_reason": "",
+          "shape_area": 0.0039062463437486484,
+          "source_cit": "48177C_STUDY2",
+          "version_id": "2.3.3.3",
+          "shape_length": 0.24999988300009354
+        },
+        "reference__id": "4bd8198c-8d55-434f-b25b-f8503ac6128c",
+        "transect_feature_type": "firm_panel",
+        "transect_summary": {
+          "location": "aoi",
+          "area": {
+            "meters": 19778493.048856217,
+            "feet": 212893927.36114553,
+            "miles": 7.6344983168585,
+            "acres": 4887.364524837616
+          },
+          "length": { "miles": 12.168719716320975, "feet": 64250.84215820164 },
+          "center": {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+              "type": "Point",
+              "coordinates": [-97.6087285, 29.53125]
+            }
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-97.595227, 29.5],
+            [-97.625, 29.5625],
+            [-97.592457, 29.5625],
+            [-97.595227, 29.5]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "firm_panel-688ecd90-a78d-4791-a660-3af031322100",
+      "properties": {
+        "_id": "688ecd90-a78d-4791-a660-3af031322100",
+        "properties": {
+          "gfid": "234468a8-df24-43c8-8c29-21a20468437e",
+          "panel": "0200",
+          "pcomm": "177C",
+          "scale": "24000",
+          "suffix": "C",
+          "firm_id": "48177C_26",
+          "st_fips": "48",
+          "base_typ": "Vector",
+          "dfirm_id": "48177C",
+          "eff_date": "20101203",
+          "firm_pan": "48177C0200C",
+          "objectid": 1859,
+          "pre_date": "99990909",
+          "panel_typ": "Countywide, Panel Printed",
+          "pnp_reason": "",
+          "shape_area": 0.015624732965907188,
+          "source_cit": "48177C_STUDY1",
+          "version_id": "1.1.1.0",
+          "shape_length": 0.49999993051873926
+        },
+        "reference__id": "4bd8198c-8d55-434f-b25b-f8503ac6128c",
+        "transect_feature_type": "firm_panel",
+        "transect_summary": {
+          "location": "aoi",
+          "area": {
+            "meters": 132239539.93312484,
+            "feet": 1423414561.4254498,
+            "miles": 51.044462414186185,
+            "acres": 32677.051515174815
+          },
+          "length": { "miles": 28.65200364840102, "feet": 151282.58410459993 },
+          "center": {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+              "type": "Point",
+              "coordinates": [-97.6875, 29.5534165]
+            }
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-97.625, 29.59261],
+            [-97.6875, 29.500005],
+            [-97.75, 29.5],
+            [-97.75, 29.606833],
+            [-97.625, 29.59261]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "firm_panel-f3bcc0b8-de96-43b5-8826-e1191f47f011",
+      "properties": {
+        "_id": "f3bcc0b8-de96-43b5-8826-e1191f47f011",
+        "properties": {
+          "gfid": "234468a8-df24-43c8-8c29-21a20468437e",
+          "panel": "0375",
+          "pcomm": "177C",
+          "scale": "24000",
+          "suffix": "D",
+          "firm_id": "48177C_6",
+          "st_fips": "48",
+          "base_typ": "Vector",
+          "dfirm_id": "48177C",
+          "eff_date": "20200122",
+          "firm_pan": "48177C0375D",
+          "objectid": 1869,
+          "pre_date": "99990909",
+          "panel_typ": "Countywide, Panel Printed",
+          "pnp_reason": "",
+          "shape_area": 0.015624983406254773,
+          "source_cit": "48177C_STUDY2",
+          "version_id": "2.3.3.3",
+          "shape_length": 0.4999996950000354
+        },
+        "reference__id": "4bd8198c-8d55-434f-b25b-f8503ac6128c",
+        "transect_feature_type": "firm_panel",
+        "transect_summary": {
+          "location": "aoi",
+          "area": {
+            "meters": 31170302.123660747,
+            "feet": 335514339.7299091,
+            "miles": 12.031736619733048,
+            "acres": 7702.337506267189
+          },
+          "length": { "miles": 18.75145082198697, "feet": 99007.66350833634 },
+          "center": {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+              "type": "Point",
+              "coordinates": [-97.6101135, 29.4423335]
+            }
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-97.625, 29.385196],
+            [-97.625, 29.5],
+            [-97.595227, 29.5],
+            [-97.600271, 29.386181],
+            [-97.600319, 29.385877],
+            [-97.600433, 29.385588],
+            [-97.600609, 29.385323],
+            [-97.600841, 29.385092],
+            [-97.60112, 29.384906],
+            [-97.601435, 29.38477],
+            [-97.601774, 29.384689],
+            [-97.602125, 29.384667],
+            [-97.625, 29.385196]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "firm_panel-9a05975f-ab35-42b5-990f-6baaa2d8ffb4",
+      "properties": {
+        "_id": "9a05975f-ab35-42b5-990f-6baaa2d8ffb4",
+        "properties": {
+          "gfid": "84e8e956-6bf1-45ad-8c74-0cce39bed445",
+          "panel": "0455",
+          "pcomm": "187C",
+          "scale": "12000",
+          "suffix": "F",
+          "firm_id": "48187C_18",
+          "st_fips": "48",
+          "base_typ": "NP",
+          "dfirm_id": "48187C",
+          "eff_date": "20071102",
+          "firm_pan": "48187C0455F",
+          "objectid": 2026,
+          "pre_date": "99990909",
+          "panel_typ": "Countywide, Panel Printed",
+          "pnp_reason": "",
+          "shape_area": 0.00390622074998972,
+          "source_cit": "48187C_BASE1",
+          "version_id": "1.1.1.0",
+          "shape_length": 0.24999906748234557
+        },
+        "reference__id": "4bd8198c-8d55-434f-b25b-f8503ac6128c",
+        "transect_feature_type": "firm_panel",
+        "transect_summary": {
+          "location": "aoi",
+          "area": {
+            "meters": 42143743.389272526,
+            "feet": 453631478.47916543,
+            "miles": 16.267484948259195,
+            "acres": 10413.929710206188
+          },
+          "length": { "miles": 16.15597585862158, "feet": 85303.55526323564 },
+          "center": {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+              "type": "Point",
+              "coordinates": [-97.71875, 29.468757500000002]
+            }
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-97.75, 29.5],
+            [-97.6875, 29.500015],
+            [-97.6875, 29.437515],
+            [-97.75, 29.4375],
+            [-97.75, 29.5]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "firm_panel-738915e8-4095-44ab-9327-fb30e4753311",
+      "properties": {
+        "_id": "738915e8-4095-44ab-9327-fb30e4753311",
+        "properties": {
+          "gfid": "84e8e956-6bf1-45ad-8c74-0cce39bed445",
+          "panel": "0330",
+          "pcomm": "187C",
+          "scale": "12000",
+          "suffix": "F",
+          "firm_id": "48187C_49",
+          "st_fips": "48",
+          "base_typ": "NP",
+          "dfirm_id": "48187C",
+          "eff_date": "20071102",
+          "firm_pan": "48187C0330F",
+          "objectid": 2035,
+          "pre_date": "99990909",
+          "panel_typ": "Countywide, Panel Printed",
+          "pnp_reason": "",
+          "shape_area": 0.0039062207187400416,
+          "source_cit": "48187C_BASE1",
+          "version_id": "1.1.1.0",
+          "shape_length": 0.2499990664032828
+        },
+        "reference__id": "4bd8198c-8d55-434f-b25b-f8503ac6128c",
+        "transect_feature_type": "firm_panel",
+        "transect_summary": {
+          "location": "aoi",
+          "area": {
+            "meters": 26392813.431844573,
+            "feet": 284089879.43296933,
+            "miles": 10.187625984692005,
+            "acres": 6521.796163075954
+          },
+          "length": { "miles": 12.957749109087462, "feet": 68416.9174853231 },
+          "center": {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+              "type": "Point",
+              "coordinates": [-97.71875, 29.584667000000003]
+            }
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-97.6875, 29.562515],
+            [-97.75, 29.562501],
+            [-97.75, 29.606833],
+            [-97.6875, 29.599722],
+            [-97.6875, 29.562515]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "firm_panel-17741416-b527-4712-ae0d-2a83aa8a0aad",
+      "properties": {
+        "_id": "17741416-b527-4712-ae0d-2a83aa8a0aad",
+        "properties": {
+          "gfid": "84e8e956-6bf1-45ad-8c74-0cce39bed445",
+          "panel": "0340",
+          "pcomm": "187C",
+          "scale": "12000",
+          "suffix": "F",
+          "firm_id": "48187C_14",
+          "st_fips": "48",
+          "base_typ": "NP",
+          "dfirm_id": "48187C",
+          "eff_date": "20071102",
+          "firm_pan": "48187C0340F",
+          "objectid": 2040,
+          "pre_date": "99990909",
+          "panel_typ": "Countywide, Panel Printed",
+          "pnp_reason": "",
+          "shape_area": 0.003906283593757579,
+          "source_cit": "48187C_BASE1",
+          "version_id": "1.1.1.0",
+          "shape_length": 0.2500010784032645
+        },
+        "reference__id": "4bd8198c-8d55-434f-b25b-f8503ac6128c",
+        "transect_feature_type": "firm_panel",
+        "transect_summary": {
+          "location": "aoi",
+          "area": {
+            "meters": 42118078.707923315,
+            "feet": 453355226.1482417,
+            "miles": 16.257578381258398,
+            "acres": 10407.587839121392
+          },
+          "length": { "miles": 16.151405716745597, "feet": 85279.42491335826 },
+          "center": {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+              "type": "Point",
+              "coordinates": [-97.71875, 29.531257500000002]
+            }
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-97.75, 29.562501],
+            [-97.6875, 29.562515],
+            [-97.6875, 29.500015],
+            [-97.75, 29.5],
+            [-97.75, 29.562501]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "firm_panel-7d687c8c-e512-4980-954f-d54e21ff8e7c",
+      "properties": {
+        "_id": "7d687c8c-e512-4980-954f-d54e21ff8e7c",
+        "properties": {
+          "gfid": "84e8e956-6bf1-45ad-8c74-0cce39bed445",
+          "panel": "0335",
+          "pcomm": "187C",
+          "scale": "12000",
+          "suffix": "F",
+          "firm_id": "48187C_34",
+          "st_fips": "48",
+          "base_typ": "NP",
+          "dfirm_id": "48187C",
+          "eff_date": "20071102",
+          "firm_pan": "48187C0335F",
+          "objectid": 2054,
+          "pre_date": "99990909",
+          "panel_typ": "Countywide, Panel Printed",
+          "pnp_reason": "",
+          "shape_area": 0.003906220531243484,
+          "source_cit": "48187C_BASE1",
+          "version_id": "1.1.1.0",
+          "shape_length": 0.2499990604033464
+        },
+        "reference__id": "4bd8198c-8d55-434f-b25b-f8503ac6128c",
+        "transect_feature_type": "firm_panel",
+        "transect_summary": {
+          "location": "aoi",
+          "area": {
+            "meters": 21603660.274053056,
+            "feet": 232539863.86920875,
+            "miles": 8.339012865784479,
+            "acres": 5338.372472019881
+          },
+          "length": { "miles": 11.975286931294532, "feet": 63229.51702057962 },
+          "center": {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+              "type": "Point",
+              "coordinates": [-97.65625, 29.5811115]
+            }
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-97.625, 29.59261],
+            [-97.625, 29.562501],
+            [-97.6875, 29.562515],
+            [-97.6875, 29.599722],
+            [-97.625, 29.59261]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "firm_panel-b6cacc6b-26a7-40d8-b254-b2489e3135e6",
+      "properties": {
+        "_id": "b6cacc6b-26a7-40d8-b254-b2489e3135e6",
+        "properties": {
+          "gfid": "84e8e956-6bf1-45ad-8c74-0cce39bed445",
+          "panel": "0285",
+          "pcomm": "187C",
+          "scale": "12000",
+          "suffix": "F",
+          "firm_id": "48187C_22",
+          "st_fips": "48",
+          "base_typ": "NP",
+          "dfirm_id": "48187C",
+          "eff_date": "20071102",
+          "firm_pan": "48187C0285F",
+          "objectid": 2003,
+          "pre_date": "99990909",
+          "panel_typ": "Countywide, Panel Printed",
+          "pnp_reason": "",
+          "shape_area": 0.0039062206562447415,
+          "source_cit": "48187C_BASE1",
+          "version_id": "1.1.1.0",
+          "shape_length": 0.24999906440341768
+        },
+        "reference__id": "4bd8198c-8d55-434f-b25b-f8503ac6128c",
+        "transect_feature_type": "firm_panel",
+        "transect_summary": {
+          "location": "aoi",
+          "area": {
+            "meters": 7700635.031455203,
+            "feet": 82888945.63259578,
+            "miles": 2.9724451221417083,
+            "acres": 1902.865419447738
+          },
+          "length": { "miles": 8.36836507909579, "feet": 44184.969031544744 },
+          "center": {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+              "type": "Point",
+              "coordinates": [-97.8999935, 29.577493500000003]
+            }
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-97.875, 29.592486],
+            [-97.875, 29.562501],
+            [-97.924987, 29.562512],
+            [-97.924826, 29.564263],
+            [-97.924769, 29.564549],
+            [-97.924652, 29.564821],
+            [-97.924479, 29.56507],
+            [-97.924257, 29.565287],
+            [-97.923993, 29.565465],
+            [-97.875, 29.592486]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "firm_panel-1bd6366c-7542-4485-87f3-59a5af2f91f5",
+      "properties": {
+        "_id": "1bd6366c-7542-4485-87f3-59a5af2f91f5",
+        "properties": {
+          "gfid": "84e8e956-6bf1-45ad-8c74-0cce39bed445",
+          "panel": "0305",
+          "pcomm": "187C",
+          "scale": "12000",
+          "suffix": "F",
+          "firm_id": "48187C_4",
+          "st_fips": "48",
+          "base_typ": "NP",
+          "dfirm_id": "48187C",
+          "eff_date": "20071102",
+          "firm_pan": "48187C0305F",
+          "objectid": 2044,
+          "pre_date": "99990909",
+          "panel_typ": "Countywide, Panel Printed",
+          "pnp_reason": "",
+          "shape_area": 0.0039062205937423367,
+          "source_cit": "48187C_BASE1",
+          "version_id": "1.1.1.0",
+          "shape_length": 0.2499990624033252
+        },
+        "reference__id": "4bd8198c-8d55-434f-b25b-f8503ac6128c",
+        "transect_feature_type": "firm_panel",
+        "transect_summary": {
+          "location": "aoi",
+          "area": {
+            "meters": 29232911.89172939,
+            "feet": 314660444.8306291,
+            "miles": 11.283903990207543,
+            "acres": 7223.598693005791
+          },
+          "length": { "miles": 13.387595145113142, "feet": 70686.50462816548 },
+          "center": {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+              "type": "Point",
+              "coordinates": [-97.84375, 29.5893045]
+            }
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-97.8125, 29.562515],
+            [-97.875, 29.562501],
+            [-97.875, 29.592486],
+            [-97.832612, 29.615865],
+            [-97.832333, 29.615991],
+            [-97.832034, 29.616073],
+            [-97.831723, 29.616108],
+            [-97.831409, 29.616096],
+            [-97.8125, 29.613945],
+            [-97.8125, 29.562515]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "firm_panel-4c059ef2-a71f-489a-afed-1d9cf7934e8f",
+      "properties": {
+        "_id": "4c059ef2-a71f-489a-afed-1d9cf7934e8f",
+        "properties": {
+          "gfid": "84e8e956-6bf1-45ad-8c74-0cce39bed445",
+          "panel": "0310",
+          "pcomm": "187C",
+          "scale": "12000",
+          "suffix": "F",
+          "firm_id": "48187C_3",
+          "st_fips": "48",
+          "base_typ": "NP",
+          "dfirm_id": "48187C",
+          "eff_date": "20071102",
+          "firm_pan": "48187C0310F",
+          "objectid": 2045,
+          "pre_date": "99990909",
+          "panel_typ": "Countywide, Panel Printed",
+          "pnp_reason": "",
+          "shape_area": 0.0039062206562411887,
+          "source_cit": "48187C_BASE1",
+          "version_id": "1.1.1.0",
+          "shape_length": 0.249999064403304
+        },
+        "reference__id": "4bd8198c-8d55-434f-b25b-f8503ac6128c",
+        "transect_feature_type": "firm_panel",
+        "transect_summary": {
+          "location": "aoi",
+          "area": {
+            "meters": 31181628.921447724,
+            "feet": 335636260.3665996,
+            "miles": 12.036108763678822,
+            "acres": 7705.13641463434
+          },
+          "length": { "miles": 13.940193298990984, "feet": 73604.22297400747 },
+          "center": {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+              "type": "Point",
+              "coordinates": [-97.78125, 29.588223]
+            }
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-97.75, 29.606833],
+            [-97.75, 29.562501],
+            [-97.8125, 29.562515],
+            [-97.8125, 29.613945],
+            [-97.75, 29.606833]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "firm_panel-8c0541b8-02e2-4ad6-a777-8b8d22f13cdd",
+      "properties": {
+        "_id": "8c0541b8-02e2-4ad6-a777-8b8d22f13cdd",
+        "properties": {
+          "gfid": "234468a8-df24-43c8-8c29-21a20468437e",
+          "panel": "0325",
+          "pcomm": "177C",
+          "scale": "24000",
+          "suffix": "C",
+          "firm_id": "48177C_22",
+          "st_fips": "48",
+          "base_typ": "Vector",
+          "dfirm_id": "48177C",
+          "eff_date": "20101203",
+          "firm_pan": "48177C0325C",
+          "objectid": 1840,
+          "pre_date": "99990909",
+          "panel_typ": "Countywide, Panel Printed",
+          "pnp_reason": "",
+          "shape_area": 0.015624838500022005,
+          "source_cit": "48177C_STUDY1",
+          "version_id": "1.1.1.0",
+          "shape_length": 0.499999615176475
+        },
+        "reference__id": "4bd8198c-8d55-434f-b25b-f8503ac6128c",
+        "transect_feature_type": "firm_panel",
+        "transect_summary": {
+          "location": "aoi",
+          "area": {
+            "meters": 146900836.89403924,
+            "feet": 1581227448.5097668,
+            "miles": 56.703723041099146,
+            "acres": 36299.931300701566
+          },
+          "length": { "miles": 30.093358513763263, "feet": 158892.9380372439 },
+          "center": {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+              "type": "Point",
+              "coordinates": [-97.8125, 29.444043]
+            }
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-97.875, 29.390967],
+            [-97.875, 29.5],
+            [-97.8125, 29.500005],
+            [-97.75, 29.5],
+            [-97.75, 29.388081],
+            [-97.875, 29.390967]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "firm_panel-482d950e-48ab-4a91-b568-4f4efff27ab1",
+      "properties": {
+        "_id": "482d950e-48ab-4a91-b568-4f4efff27ab1",
+        "properties": {
+          "gfid": "84e8e956-6bf1-45ad-8c74-0cce39bed445",
+          "panel": "0320",
+          "pcomm": "187C",
+          "scale": "12000",
+          "suffix": "F",
+          "firm_id": "48187C_25",
+          "st_fips": "48",
+          "base_typ": "NP",
+          "dfirm_id": "48187C",
+          "eff_date": "20071102",
+          "firm_pan": "48187C0320F",
+          "objectid": 2000,
+          "pre_date": "99990909",
+          "panel_typ": "Countywide, Panel Printed",
+          "pnp_reason": "",
+          "shape_area": 0.00390628353125772,
+          "source_cit": "48187C_BASE1",
+          "version_id": "1.1.1.0",
+          "shape_length": 0.2500010764032857
+        },
+        "reference__id": "4bd8198c-8d55-434f-b25b-f8503ac6128c",
+        "transect_feature_type": "firm_panel",
+        "transect_summary": {
+          "location": "aoi",
+          "area": {
+            "meters": 42118078.707914494,
+            "feet": 453355226.14814675,
+            "miles": 16.257578381254994,
+            "acres": 10407.587839119211
+          },
+          "length": { "miles": 16.151405716745597, "feet": 85279.42491335826 },
+          "center": {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+              "type": "Point",
+              "coordinates": [-97.78125, 29.531257500000002]
+            }
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-97.75, 29.5],
+            [-97.8125, 29.500015],
+            [-97.8125, 29.562515],
+            [-97.75, 29.562501],
+            [-97.75, 29.5]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "firm_panel-b9c658e1-2262-40ef-b312-1b6ae0106597",
+      "properties": {
+        "_id": "b9c658e1-2262-40ef-b312-1b6ae0106597",
+        "properties": {
+          "gfid": "84e8e956-6bf1-45ad-8c74-0cce39bed445",
+          "panel": "0445",
+          "pcomm": "187C",
+          "scale": "12000",
+          "suffix": "F",
+          "firm_id": "48187C_23",
+          "st_fips": "48",
+          "base_typ": "NP",
+          "dfirm_id": "48187C",
+          "eff_date": "20071102",
+          "firm_pan": "48187C0445F",
+          "objectid": 2002,
+          "pre_date": "99990909",
+          "panel_typ": "Countywide, Panel Printed",
+          "pnp_reason": "",
+          "shape_area": 0.003906273031255772,
+          "source_cit": "48187C_BASE1",
+          "version_id": "1.1.1.0",
+          "shape_length": 0.2500007404821548
+        },
+        "reference__id": "4bd8198c-8d55-434f-b25b-f8503ac6128c",
+        "transect_feature_type": "firm_panel",
+        "transect_summary": {
+          "location": "aoi",
+          "area": {
+            "meters": 31796921.617048357,
+            "feet": 342259215.8222793,
+            "miles": 12.273611744180664,
+            "acres": 7857.178316180734
+          },
+          "length": { "miles": 14.037426618433557, "feet": 74117.61491709278 },
+          "center": {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+              "type": "Point",
+              "coordinates": [-97.78125, 29.412798000000002]
+            }
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-97.8125, 29.389524],
+            [-97.8125, 29.437515],
+            [-97.75, 29.4375],
+            [-97.75, 29.388081],
+            [-97.8125, 29.389524]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "firm_panel-16d40a6c-2d0f-4d38-89ae-1f213043789e",
+      "properties": {
+        "_id": "16d40a6c-2d0f-4d38-89ae-1f213043789e",
+        "properties": {
+          "gfid": "84e8e956-6bf1-45ad-8c74-0cce39bed445",
+          "panel": "0315",
+          "pcomm": "187C",
+          "scale": "12000",
+          "suffix": "F",
+          "firm_id": "48187C_1",
+          "st_fips": "48",
+          "base_typ": "NP",
+          "dfirm_id": "48187C",
+          "eff_date": "20071102",
+          "firm_pan": "48187C0315F",
+          "objectid": 2005,
+          "pre_date": "99990909",
+          "panel_typ": "Countywide, Panel Printed",
+          "pnp_reason": "",
+          "shape_area": 0.0039062834687578615,
+          "source_cit": "48187C_BASE1",
+          "version_id": "1.1.1.0",
+          "shape_length": 0.2500010744033069
+        },
+        "reference__id": "4bd8198c-8d55-434f-b25b-f8503ac6128c",
+        "transect_feature_type": "firm_panel",
+        "transect_summary": {
+          "location": "aoi",
+          "area": {
+            "meters": 42118078.707914494,
+            "feet": 453355226.14814675,
+            "miles": 16.257578381254994,
+            "acres": 10407.587839119211
+          },
+          "length": { "miles": 16.151405716745597, "feet": 85279.42491335826 },
+          "center": {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+              "type": "Point",
+              "coordinates": [-97.84375, 29.531257500000002]
+            }
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-97.875, 29.562501],
+            [-97.8125, 29.562515],
+            [-97.8125, 29.500015],
+            [-97.875, 29.5],
+            [-97.875, 29.562501]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "firm_panel-ec2931c3-0330-4959-91b5-f097beaae11e",
+      "properties": {
+        "_id": "ec2931c3-0330-4959-91b5-f097beaae11e",
+        "properties": {
+          "gfid": "84e8e956-6bf1-45ad-8c74-0cce39bed445",
+          "panel": "0410",
+          "pcomm": "187C",
+          "scale": "12000",
+          "suffix": "F",
+          "firm_id": "48187C_44",
+          "st_fips": "48",
+          "base_typ": "NP",
+          "dfirm_id": "48187C",
+          "eff_date": "20071102",
+          "firm_pan": "48187C0410F",
+          "objectid": 2012,
+          "pre_date": "99990909",
+          "panel_typ": "Countywide, Panel Printed",
+          "pnp_reason": "",
+          "shape_area": 0.00390622068749442,
+          "source_cit": "48187C_BASE1",
+          "version_id": "1.1.1.0",
+          "shape_length": 0.24999906548248046
+        },
+        "reference__id": "4bd8198c-8d55-434f-b25b-f8503ac6128c",
+        "transect_feature_type": "firm_panel",
+        "transect_summary": {
+          "location": "aoi",
+          "area": {
+            "meters": 38280499.89246028,
+            "feet": 412047871.5604206,
+            "miles": 14.776272958489667,
+            "acres": 9459.302925926399
+          },
+          "length": { "miles": 15.480439356454838, "feet": 81736.7224176566 },
+          "center": {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+              "type": "Point",
+              "coordinates": [-97.90572499999999, 29.468756499999998]
+            }
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-97.875, 29.4375],
+            [-97.93645, 29.437515],
+            [-97.930718, 29.500013],
+            [-97.875, 29.5],
+            [-97.875, 29.4375]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "firm_panel-755298f0-22c0-4aac-8ade-930825dd787a",
+      "properties": {
+        "_id": "755298f0-22c0-4aac-8ade-930825dd787a",
+        "properties": {
+          "gfid": "84e8e956-6bf1-45ad-8c74-0cce39bed445",
+          "panel": "0440",
+          "pcomm": "187C",
+          "scale": "12000",
+          "suffix": "F",
+          "firm_id": "48187C_8",
+          "st_fips": "48",
+          "base_typ": "NP",
+          "dfirm_id": "48187C",
+          "eff_date": "20071102",
+          "firm_pan": "48187C0440F",
+          "objectid": 2016,
+          "pre_date": "99990909",
+          "panel_typ": "Countywide, Panel Printed",
+          "pnp_reason": "",
+          "shape_area": 0.003906272968756081,
+          "source_cit": "48187C_BASE1",
+          "version_id": "1.1.1.0",
+          "shape_length": 0.25000073848217597
+        },
+        "reference__id": "4bd8198c-8d55-434f-b25b-f8503ac6128c",
+        "transect_feature_type": "firm_panel",
+        "transect_summary": {
+          "location": "aoi",
+          "area": {
+            "meters": 30823162.511616837,
+            "feet": 331777760.0436764,
+            "miles": 11.897740729484099,
+            "acres": 7616.557572433079
+          },
+          "length": { "miles": 13.837969653373802, "feet": 73064.48210787703 },
+          "center": {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+              "type": "Point",
+              "coordinates": [-97.84375, 29.4135195]
+            }
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-97.875, 29.4375],
+            [-97.8125, 29.437515],
+            [-97.8125, 29.389524],
+            [-97.875, 29.390967],
+            [-97.875, 29.4375]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "firm_panel-da8e0a66-f4a6-47d6-8602-2dbe6d8ff4a9",
+      "properties": {
+        "_id": "da8e0a66-f4a6-47d6-8602-2dbe6d8ff4a9",
+        "properties": {
+          "gfid": "84e8e956-6bf1-45ad-8c74-0cce39bed445",
+          "panel": "0435",
+          "pcomm": "187C",
+          "scale": "12000",
+          "suffix": "F",
+          "firm_id": "48187C_62",
+          "st_fips": "48",
+          "base_typ": "NP",
+          "dfirm_id": "48187C",
+          "eff_date": "20071102",
+          "firm_pan": "48187C0435F",
+          "objectid": 2017,
+          "pre_date": "99990909",
+          "panel_typ": "Countywide, Panel Printed",
+          "pnp_reason": "",
+          "shape_area": 0.0039062206874908674,
+          "source_cit": "48187C_BASE1",
+          "version_id": "1.1.1.0",
+          "shape_length": 0.24999906548236678
+        },
+        "reference__id": "4bd8198c-8d55-434f-b25b-f8503ac6128c",
+        "transect_feature_type": "firm_panel",
+        "transect_summary": {
+          "location": "aoi",
+          "area": {
+            "meters": 42143743.389263704,
+            "feet": 453631478.4790705,
+            "miles": 16.267484948255788,
+            "acres": 10413.92971020401
+          },
+          "length": { "miles": 16.15597585862158, "feet": 85303.55526323564 },
+          "center": {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+              "type": "Point",
+              "coordinates": [-97.78125, 29.468757500000002]
+            }
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-97.75, 29.4375],
+            [-97.8125, 29.437515],
+            [-97.8125, 29.500015],
+            [-97.75, 29.5],
+            [-97.75, 29.4375]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "firm_panel-67a42321-235b-4cf7-a7ac-53f4088f4ebb",
+      "properties": {
+        "_id": "67a42321-235b-4cf7-a7ac-53f4088f4ebb",
+        "properties": {
+          "gfid": "84e8e956-6bf1-45ad-8c74-0cce39bed445",
+          "panel": "0420",
+          "pcomm": "187C",
+          "scale": "12000",
+          "suffix": "F",
+          "firm_id": "48187C_2",
+          "st_fips": "48",
+          "base_typ": "NP",
+          "dfirm_id": "48187C",
+          "eff_date": "20071102",
+          "firm_pan": "48187C0420F",
+          "objectid": 2046,
+          "pre_date": "99990909",
+          "panel_typ": "Countywide, Panel Printed",
+          "pnp_reason": "",
+          "shape_area": 0.003906273031259325,
+          "source_cit": "48187C_BASE1",
+          "version_id": "1.1.1.0",
+          "shape_length": 0.2500007404822685
+        },
+        "reference__id": "4bd8198c-8d55-434f-b25b-f8503ac6128c",
+        "transect_feature_type": "firm_panel",
+        "transect_summary": {
+          "location": "aoi",
+          "area": {
+            "meters": 29367228.57505036,
+            "feet": 316106217.5774047,
+            "miles": 11.33575022996944,
+            "acres": 7256.78901703782
+          },
+          "length": { "miles": 13.47310766664123, "feet": 71138.01075628198 },
+          "center": {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+              "type": "Point",
+              "coordinates": [-97.90625, 29.414241]
+            }
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-97.9375, 29.39241],
+            [-97.9375, 29.426061],
+            [-97.93645, 29.437515],
+            [-97.875, 29.4375],
+            [-97.875, 29.390967],
+            [-97.9375, 29.39241]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "firm_panel-a040c319-5c67-4b67-9b42-bc00bf10caab",
+      "properties": {
+        "_id": "a040c319-5c67-4b67-9b42-bc00bf10caab",
+        "properties": {
+          "gfid": "84e8e956-6bf1-45ad-8c74-0cce39bed445",
+          "panel": "0415",
+          "pcomm": "187C",
+          "scale": "12000",
+          "suffix": "F",
+          "firm_id": "48187C_35",
+          "st_fips": "48",
+          "base_typ": "NP",
+          "dfirm_id": "48187C",
+          "eff_date": "20071102",
+          "firm_pan": "48187C0415F",
+          "objectid": 2053,
+          "pre_date": "99990909",
+          "panel_typ": "Countywide, Panel Printed",
+          "pnp_reason": "",
+          "shape_area": 0.003906273031255772,
+          "source_cit": "48187C_BASE1",
+          "version_id": "1.1.1.0",
+          "shape_length": 0.2500007404821548
+        },
+        "reference__id": "4bd8198c-8d55-434f-b25b-f8503ac6128c",
+        "transect_feature_type": "firm_panel",
+        "transect_summary": {
+          "location": "aoi",
+          "area": {
+            "meters": 74810.48350657354,
+            "feet": 805253.3427172136,
+            "miles": 0.028876846633537383,
+            "acres": 18.486044526891856
+          },
+          "length": { "miles": 1.7695172542218773, "feet": 9343.05140126915 },
+          "center": {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+              "type": "Point",
+              "coordinates": [-97.938964, 29.4092355]
+            }
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-97.9375, 29.426061],
+            [-97.9375, 29.39241],
+            [-97.938674, 29.392437],
+            [-97.939037, 29.392478],
+            [-97.939384, 29.392581],
+            [-97.939699, 29.392744],
+            [-97.93997, 29.392958],
+            [-97.940186, 29.393216],
+            [-97.940338, 29.393506],
+            [-97.94042, 29.393817],
+            [-97.940428, 29.394136],
+            [-97.9375, 29.426061]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "firm_panel-b5ad2edf-68f0-462f-ab83-2dd75c35dad6",
+      "properties": {
+        "_id": "b5ad2edf-68f0-462f-ab83-2dd75c35dad6",
+        "properties": {
+          "gfid": "84e8e956-6bf1-45ad-8c74-0cce39bed445",
+          "panel": "0430",
+          "pcomm": "187C",
+          "scale": "12000",
+          "suffix": "F",
+          "firm_id": "48187C_31",
+          "st_fips": "48",
+          "base_typ": "NP",
+          "dfirm_id": "48187C",
+          "eff_date": "20071102",
+          "firm_pan": "48187C0430F",
+          "objectid": 2057,
+          "pre_date": "99990909",
+          "panel_typ": "Countywide, Panel Printed",
+          "pnp_reason": "",
+          "shape_area": 0.003906220624992014,
+          "source_cit": "48187C_BASE1",
+          "version_id": "1.1.1.0",
+          "shape_length": 0.24999906348238798
+        },
+        "reference__id": "4bd8198c-8d55-434f-b25b-f8503ac6128c",
+        "transect_feature_type": "firm_panel",
+        "transect_summary": {
+          "location": "aoi",
+          "area": {
+            "meters": 42143743.389263704,
+            "feet": 453631478.4790705,
+            "miles": 16.267484948255788,
+            "acres": 10413.92971020401
+          },
+          "length": { "miles": 16.15597585862158, "feet": 85303.55526323564 },
+          "center": {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+              "type": "Point",
+              "coordinates": [-97.84375, 29.468757500000002]
+            }
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-97.875, 29.5],
+            [-97.8125, 29.500015],
+            [-97.8125, 29.437515],
+            [-97.875, 29.4375],
+            [-97.875, 29.5]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "firm_panel-2a08fd89-d465-48f6-97a1-e281c16f89e1",
+      "properties": {
+        "_id": "2a08fd89-d465-48f6-97a1-e281c16f89e1",
+        "properties": {
+          "gfid": "84e8e956-6bf1-45ad-8c74-0cce39bed445",
+          "panel": "0295",
+          "pcomm": "187C",
+          "scale": "12000",
+          "suffix": "F",
+          "firm_id": "48187C_30",
+          "st_fips": "48",
+          "base_typ": "NP",
+          "dfirm_id": "48187C",
+          "eff_date": "20071102",
+          "firm_pan": "48187C0295F",
+          "objectid": 2058,
+          "pre_date": "99990909",
+          "panel_typ": "Countywide, Panel Printed",
+          "pnp_reason": "",
+          "shape_area": 0.003906283531261273,
+          "source_cit": "48187C_BASE1",
+          "version_id": "1.1.1.0",
+          "shape_length": 0.2500010764033994
+        },
+        "reference__id": "4bd8198c-8d55-434f-b25b-f8503ac6128c",
+        "transect_feature_type": "firm_panel",
+        "transect_summary": {
+          "location": "aoi",
+          "area": {
+            "meters": 34395066.88321549,
+            "feet": 370225418.7176549,
+            "miles": 13.276495816921178,
+            "acres": 8499.193002176964
+          },
+          "length": { "miles": 14.78721755778572, "feet": 78076.51120355689 },
+          "center": {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+              "type": "Point",
+              "coordinates": [-97.902859, 29.531256]
+            }
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-97.875, 29.5],
+            [-97.930718, 29.500013],
+            [-97.924987, 29.562512],
+            [-97.875, 29.562501],
+            [-97.875, 29.5]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "firm_panel-f605ac2b-96b9-4c30-b660-a839ff98e3bb",
+      "properties": {
+        "_id": "f605ac2b-96b9-4c30-b660-a839ff98e3bb",
+        "properties": {
+          "gfid": "456d5596-a99d-4fa9-af1f-cc07d0a4cd91",
+          "panel": "0075",
+          "pcomm": "493C",
+          "scale": "24000",
+          "suffix": "C",
+          "firm_id": "48493C_5",
+          "st_fips": "48",
+          "base_typ": "NP",
+          "dfirm_id": "48493C",
+          "eff_date": "20101126",
+          "firm_pan": "48493C0075C",
+          "objectid": 4777,
+          "pre_date": "99990909",
+          "panel_typ": "Countywide, Not Printed",
+          "pnp_reason": "NO SPECIAL FLOOD HAZARD AREAS",
+          "shape_area": 0.015624014781348564,
+          "source_cit": "48493C_BASE8",
+          "version_id": "1.1.1.0",
+          "shape_length": 0.500001815154804
+        },
+        "reference__id": "4bd8198c-8d55-434f-b25b-f8503ac6128c",
+        "transect_feature_type": "firm_panel",
+        "transect_summary": {
+          "location": "aoi",
+          "area": {
+            "meters": 67717540.40671924,
+            "feet": 728905538.5975037,
+            "miles": 26.138970596993627,
+            "acres": 16733.342822202358
+          },
+          "length": { "miles": 21.844355089928555, "feet": 115338.19856564503 },
+          "center": {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+              "type": "Point",
+              "coordinates": [-97.907714, 29.4454835]
+            }
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-97.875, 29.5],
+            [-97.875, 29.390967],
+            [-97.938674, 29.392437],
+            [-97.939037, 29.392478],
+            [-97.939384, 29.392581],
+            [-97.939699, 29.392744],
+            [-97.93997, 29.392958],
+            [-97.940186, 29.393216],
+            [-97.940338, 29.393506],
+            [-97.94042, 29.393817],
+            [-97.940428, 29.394136],
+            [-97.930719, 29.5],
+            [-97.875, 29.5]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "firm_panel-51adc7ef-a40b-429b-83b9-de2992229220",
+      "properties": {
+        "_id": "51adc7ef-a40b-429b-83b9-de2992229220",
+        "properties": {
+          "gfid": "456d5596-a99d-4fa9-af1f-cc07d0a4cd91",
+          "panel": "0100",
+          "pcomm": "493C",
+          "scale": "24000",
+          "suffix": "C",
+          "firm_id": "48493C_28",
+          "st_fips": "48",
+          "base_typ": "NP",
+          "dfirm_id": "48493C",
+          "eff_date": "20101126",
+          "firm_pan": "48493C0100C",
+          "objectid": 4783,
+          "pre_date": "99990909",
+          "panel_typ": "Countywide, Not Printed",
+          "pnp_reason": "NO SPECIAL FLOOD HAZARD AREAS",
+          "shape_area": 0.01562439189718212,
+          "source_cit": "48493C_BASE8",
+          "version_id": "1.1.1.0",
+          "shape_length": 0.5000018118302538
+        },
+        "reference__id": "4bd8198c-8d55-434f-b25b-f8503ac6128c",
+        "transect_feature_type": "firm_panel",
+        "transect_summary": {
+          "location": "aoi",
+          "area": {
+            "meters": 146898140.52585363,
+            "feet": 1581198425.0441658,
+            "miles": 56.7026822429795,
+            "acres": 36299.26501464107
+          },
+          "length": { "miles": 30.093427453090342, "feet": 158893.30203690252 },
+          "center": {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+              "type": "Point",
+              "coordinates": [-97.8125, 29.444041]
+            }
+          }
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-97.875, 29.390967],
+            [-97.875, 29.5],
+            [-97.75, 29.500001],
+            [-97.75, 29.388081],
+            [-97.875, 29.390967]
+          ]
+        ]
+      }
+    }
+  ]
+}
