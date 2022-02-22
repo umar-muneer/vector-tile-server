@@ -37,6 +37,10 @@ app.get("/landcover", (req, res) => {
   res.json(landcover);
 });
 
+app.get("/health", (req, res) => {
+  res.json("OK");
+});
+
 /**
  * Observations
  * 1. If we go by this approach, we will probably need a very performant vector tile server
