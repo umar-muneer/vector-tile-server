@@ -8,7 +8,16 @@ const path = require("path");
 
 const tileIndex = geoJsonVt(featureCollection);
 const app = express();
-app.use(compression());
+app.use(
+  compression({
+    filter: (req, res) => {
+      if (res.getHeader("Content-Type") === "application/protobuf") {
+        return true;
+      }
+      return compression.filter(req, res);
+    },
+  })
+);
 app.get("/vt/:z/:x/:y", (req, res) => {
   const { z, x, y } = req.params;
   const zNumber = parseInt(z, 10);
@@ -22,6 +31,7 @@ app.get("/vt/:z/:x/:y", (req, res) => {
   const pbfFormat = vtPbf.fromGeojsonVt({ geojsonLayer: tile });
   const buffer = Buffer.from(pbfFormat);
   res.set("Content-Type", "application/protobuf");
+  console.log(`my header is ${res.getHeader("Content-Type")}`);
   res.send(buffer);
 });
 
