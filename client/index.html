@@ -24,26 +24,72 @@
       }
       #map {
         position: absolute;
-        top: 0;
-        bottom: 0;
-        width: 100%;
+        top: 100;
+        bottom: 100;
+        width: 80%;
+        height: 80%;
       }
     </style>
   </head>
   <body>
+    <label>
+      <input type="checkbox" onchange="toggleLandCover(this)" />Landcover
+    </label>
+    <label> <input type="checkbox" onchange="toggleHydro(this)" />Hydro </label>
+    <label> <input type="checkbox" onchange="toggleSoil(this)" />Soil </label>
     <div id="map"></div>
     <script>
-      // const aoi = {
-      //   type: "Polygon",
-      //   coordinates: [
-      //     [
-      //       [-98.50508619798347, 29.42772236885503],
-      //       [-98.49743951344863, 29.4292896380648],
-      //       [-98.4975281311199, 29.421804640442133],
-      //       [-98.50508619798347, 29.42772236885503],
-      //     ],
-      //   ],
-      // };
+      const toggleLandCover = (cb) => {
+        if (cb.checked) {
+          map.addLayer({
+            id: "test-vector-layer-landcover",
+            type: "fill",
+            source: "test-vector",
+            "source-layer": "geojsonLayer",
+            paint: {
+              "fill-color": "green",
+              "fill-opacity": 0.7,
+            },
+            filter: ["==", ["get", "transect_feature_type"], "landcover"],
+          });
+        } else {
+          map.removeLayer("test-vector-layer-landcover");
+        }
+      };
+      const toggleHydro = (cb) => {
+        if (cb.checked) {
+          map.addLayer({
+            id: "test-vector-layer-hydro",
+            type: "fill",
+            source: "test-vector",
+            "source-layer": "geojsonLayer",
+            paint: {
+              "fill-color": "red",
+              "fill-opacity": 0.7,
+            },
+            filter: ["==", ["get", "transect_feature_type"], "hydrography"],
+          });
+        } else {
+          map.removeLayer("test-vector-layer-hydro");
+        }
+      };
+      const toggleSoil = (cb) => {
+        if (cb.checked) {
+          map.addLayer({
+            id: "test-vector-layer-soil",
+            type: "fill",
+            source: "test-vector",
+            "source-layer": "geojsonLayer",
+            paint: {
+              "fill-color": "pink",
+              "fill-opacity": 0.4,
+            },
+            filter: ["==", ["get", "transect_feature_type"], "soil"],
+          });
+        } else {
+          map.removeLayer("test-vector-layer-soil");
+        }
+      };
       const aoi = {
         type: "Polygon",
         coordinates: [
@@ -88,39 +134,6 @@
           // tiles: ["http://localhost:3005/vt/{z}/{x}/{y}"],
           minzoom: 2,
           maxzoom: 14,
-        });
-        map.addLayer({
-          id: "test-vector-layer-landcover",
-          type: "fill",
-          source: "test-vector",
-          "source-layer": "geojsonLayer",
-          paint: {
-            "fill-color": "green",
-            "fill-opacity": 0.7,
-          },
-          filter: ["==", ["get", "transect_feature_type"], "landcover"],
-        });
-        map.addLayer({
-          id: "test-vector-layer-hydro",
-          type: "fill",
-          source: "test-vector",
-          "source-layer": "geojsonLayer",
-          paint: {
-            "fill-color": "red",
-            "fill-opacity": 0.7,
-          },
-          filter: ["==", ["get", "transect_feature_type"], "hydrography"],
-        });
-        map.addLayer({
-          id: "test-vector-layer-soil",
-          type: "fill",
-          source: "test-vector",
-          "source-layer": "geojsonLayer",
-          paint: {
-            "fill-color": "pink",
-            "fill-opacity": 0.4,
-          },
-          filter: ["==", ["get", "transect_feature_type"], "soil"],
         });
       });
     </script>

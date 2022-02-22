@@ -31,7 +31,6 @@ app.get("/vt/:z/:x/:y", (req, res) => {
   const pbfFormat = vtPbf.fromGeojsonVt({ geojsonLayer: tile });
   const buffer = Buffer.from(pbfFormat);
   res.set("Content-Type", "application/protobuf");
-  console.log(`my header is ${res.getHeader("Content-Type")}`);
   res.send(buffer);
 });
 
