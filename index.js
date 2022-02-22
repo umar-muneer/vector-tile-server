@@ -22,7 +22,7 @@ app.get("/vt/:z/:x/:y", (req, res) => {
   const pbfFormat = vtPbf.fromGeojsonVt({ geojsonLayer: tile });
   const buffer = Buffer.from(pbfFormat);
   res.set("Content-Type", "application/protobuf");
-
+  res.set("Content-Encoding", "gzip");
   res.send(buffer);
 });
 
