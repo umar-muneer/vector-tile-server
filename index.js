@@ -5,9 +5,44 @@ const express = require("express");
 const landcover = require("./reportParts/landcover.json");
 const { featureCollection } = require("./all-features");
 const path = require("path");
+const MbTiles = require("@mapbox/mbtiles");
+const { VectorTile } = require("@mapbox/vector-tile");
+const zlib = require("zlib");
+const Protobuf = require("pbf");
 
-const tileIndex = geoJsonVt(featureCollection);
+let tileIndex = {};
+
+const getTile = (z, x, y) => {
+  return new Promise((resolve, reject) => {
+    tileIndex.getTile(z, x, y, (err, mbTile, headers) => {
+      if (err) {
+        return reject(err);
+      }
+      resolve({ mbTile, headers });
+    });
+  });
+};
+
+const getTileIndex = () => {
+  return new Promise((resolve, reject) => {
+    new MbTiles("./reportParts/repository.mbtiles", (err, mbTileIndex) => {
+      if (err) {
+        return reject(err);
+      }
+      resolve(mbTileIndex);
+    });
+  });
+};
 const app = express();
+app.use(async (req, res, next) => {
+  try {
+    tileIndex = await getTileIndex();
+    next();
+  } catch (err) {
+    console.log(err);
+    res.status(500).json("sth went wrong while loading the tile index");
+  }
+});
 app.use(
   compression({
     filter: (req, res) => {
@@ -18,20 +53,23 @@ app.use(
     },
   })
 );
-app.get("/vt/:z/:x/:y", (req, res) => {
+app.get("/vt/:z/:x/:y", async (req, res) => {
   const { z, x, y } = req.params;
-  const zNumber = parseInt(z, 10);
-  const xNumber = parseInt(x, 10);
-  const YNumber = parseInt(y, 10);
-  const tile = tileIndex.getTile(zNumber, xNumber, YNumber);
-  if (!tile) {
-    res.status(404).end();
-    return;
+  try {
+    const { mbTile, headers } = await getTile(z, x, y);
+    if (!mbTile) {
+      res.status(404).end();
+      return;
+    }
+    const unzipped = zlib.gunzipSync(mbTile);
+    const vectorTile = new VectorTile(new Protobuf(unzipped));
+    const fromVectorTile = vtPbf.fromVectorTileJs(vectorTile);
+    res.set("Content-Type", "application/protobuf");
+    res.send(Buffer.from(fromVectorTile));
+  } catch (error) {
+    console.log(error);
+    res.status(500).json("sth went wrong while loading the tile");
   }
-  const pbfFormat = vtPbf.fromGeojsonVt({ geojsonLayer: tile });
-  const buffer = Buffer.from(pbfFormat);
-  res.set("Content-Type", "application/protobuf");
-  res.send(buffer);
 });
 
 app.get("/", (req, res) => {

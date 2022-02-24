@@ -10,9 +10,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@mapbox/mbtiles": "^0.12.1",
     "compression": "^1.7.4",
     "express": "^4.17.3",
     "geojson-vt": "^3.2.1",
+    "pbf": "^3.2.1",
     "turf": "^3.0.14",
     "vt-pbf": "^3.1.3"
   }

@@ -45,7 +45,7 @@
             id: "test-vector-layer-landcover",
             type: "fill",
             source: "test-vector",
-            "source-layer": "geojsonLayer",
+            "source-layer": "landcover",
             paint: {
               "fill-color": "green",
               "fill-opacity": 0.7,
@@ -62,7 +62,7 @@
             id: "test-vector-layer-hydro",
             type: "fill",
             source: "test-vector",
-            "source-layer": "geojsonLayer",
+            "source-layer": "hydrography",
             paint: {
               "fill-color": "red",
               "fill-opacity": 0.7,
@@ -79,7 +79,7 @@
             id: "test-vector-layer-soil",
             type: "fill",
             source: "test-vector",
-            "source-layer": "geojsonLayer",
+            "source-layer": "soil",
             paint: {
               "fill-color": "pink",
               "fill-opacity": 0.4,
@@ -130,8 +130,8 @@
         });
         map.addSource("test-vector", {
           type: "vector",
-          tiles: ["http://34.71.113.166:3005/vt/{z}/{x}/{y}"],
-          // tiles: ["http://localhost:3005/vt/{z}/{x}/{y}"],
+          // tiles: ["http://34.71.113.166:3005/vt/{z}/{x}/{y}"],
+          tiles: ["http://localhost:3005/vt/{z}/{x}/{y}"],
           minzoom: 2,
           maxzoom: 14,
         });
