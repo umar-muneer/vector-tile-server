@@ -10,11 +10,15 @@ const { VectorTile } = require("@mapbox/vector-tile");
 const zlib = require("zlib");
 const Protobuf = require("pbf");
 
-let tileIndex = {};
+const repository = {
+  landcover: {},
+  hydrography: {},
+  soil: {},
+};
 
-const getTile = (z, x, y) => {
+const getTile = (layerName, z, x, y) => {
   return new Promise((resolve, reject) => {
-    tileIndex.getTile(z, x, y, (err, mbTile, headers) => {
+    repository[layerName].getTile(z, x, y, (err, mbTile, headers) => {
       if (err) {
         return reject(err);
       }
@@ -23,9 +27,9 @@ const getTile = (z, x, y) => {
   });
 };
 
-const getTileIndex = () => {
+const getTileIndex = (layerName) => {
   return new Promise((resolve, reject) => {
-    new MbTiles("./reportParts/repository.mbtiles", (err, mbTileIndex) => {
+    new MbTiles(`./reportParts/${layerName}.mbtiles`, (err, mbTileIndex) => {
       if (err) {
         return reject(err);
       }
@@ -36,7 +40,9 @@ const getTileIndex = () => {
 const app = express();
 app.use(async (req, res, next) => {
   try {
-    tileIndex = await getTileIndex();
+    repository.landcover = await getTileIndex("landcover");
+    repository.soil = await getTileIndex("soil");
+    repository.hydrography = await getTileIndex("hydrography");
     next();
   } catch (err) {
     console.log(err);
@@ -55,8 +61,9 @@ app.use(
 );
 app.get("/vt/:z/:x/:y", async (req, res) => {
   const { z, x, y } = req.params;
+  const layerName = req.query.layer;
   try {
-    const { mbTile, headers } = await getTile(z, x, y);
+    const { mbTile, headers } = await getTile(layerName, z, x, y);
     if (!mbTile) {
       res.status(404).end();
       return;
