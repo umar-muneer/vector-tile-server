@@ -40,6 +40,7 @@
     <label>
       <input type="checkbox" onchange="toggleProject(this)" />Project
     </label>
+    <label> <input type="checkbox" onchange="toggleFirm(this)" />Firm </label>
     <div id="map"></div>
     <script>
       const toggleLandCover = (cb) => {
@@ -48,7 +49,7 @@
             id: "test-vector-layer-landcover",
             type: "fill",
             source: "landcover-vector",
-            "source-layer": "landcover",
+            "source-layer": "landcoverz612",
             // "source-layer": "geojsonLayer",
             paint: {
               "fill-color": "green",
@@ -110,6 +111,23 @@
           map.removeLayer("project-aoi-layer");
         }
       };
+      const toggleFirm = (cb) => {
+        if (cb.checked) {
+          map.addLayer({
+            id: "firm-layer-line",
+            source: "firm-vector",
+            type: "line",
+            "source-layer": "firm",
+            layout: {},
+            paint: {
+              "line-color": "#c01b1b",
+              "line-width": 3,
+            },
+          });
+        } else {
+          map.removeLayer("firm-layer-line");
+        }
+      };
       const aoi = {
         type: "Polygon",
         coordinates: [
@@ -124,13 +142,15 @@
         ],
       };
       const bbox = turf.bbox(aoi);
+      console.log(bbox);
+      console.log("aoi center is", turf.center(aoi));
       mapboxgl.accessToken =
         "pk.eyJ1IjoidW1hcm11bmVlcjIwMTAiLCJhIjoiY2tta2dkcnI3MTB3YzJ1czcwd2dyejVqaSJ9.ba-W1B5R71tQ2vBK6ee8tA";
       const map = new mapboxgl.Map({
         container: "map", // container ID
         style: "mapbox://styles/mapbox/streets-v11", // style URL
         center: [-97.833637, 29.59581], // starting position [lng, lat]
-        zoom: 14, // starting zoom
+        zoom: 10, // starting zoom
       });
       map.on("load", () => {
         map.fitBounds(bbox);
@@ -151,29 +171,30 @@
         map.addSource("landcover-vector", {
           type: "vector",
           // tiles: ["http://34.65.111.18:3005/vt/{z}/{x}/{y}?layer=landcover"],
-          tiles: [
-            "http://localhost:3005/db/vt/{z}/{x}/{y}?layer=landcover&reportPartId=6f9d62b9-5c18-4629-868a-d458eed8539b",
-          ],
-          minzoom: 2,
-          maxzoom: 14,
+          // tiles: [
+          //   "http://localhost:3005/db/vt/{z}/{x}/{y}?layer=landcover&reportPartId=6f9d62b9-5c18-4629-868a-d458eed8539b",
+          // ],
+          url: "mapbox://umarmuneer2010.landcoverz612",
+          // url: "mapbox://mapbox.mapbox-terrain-v2",
+          minzoom: 6,
+          maxzoom: 12,
         });
         map.addSource("soil-vector", {
           type: "vector",
           // tiles: ["http://34.65.111.18:3005/vt/{z}/{x}/{y}?layer=soil"],
-          tiles: [
-            "http://localhost:3005/db/vt/{z}/{x}/{y}?layer=soil&reportPartId=7ff04055-d10f-42d9-b0c1-0af5f8bd66ec",
-          ],
-          minzoom: 2,
-          maxzoom: 14,
+          url: "mapbox://umarmuneer2010.soil",
+          minzoom: 11,
+          maxzoom: 13,
         });
         map.addSource("hydrography-vector", {
           type: "vector",
           // tiles: ["http://34.65.111.18:3005/vt/{z}/{x}/{y}?layer=hydrography"],
-          tiles: [
-            "http://localhost:3005/db/vt/{z}/{x}/{y}?layer=hydrography&reportPartId=b25d6532-2f01-4889-8a93-6b517223c88b",
-          ],
-          minzoom: 2,
-          maxzoom: 14,
+          // tiles: [
+          //   "http://localhost:3005/db/vt/{z}/{x}/{y}?layer=hydrography&reportPartId=b25d6532-2f01-4889-8a93-6b517223c88b",
+          // ],
+          url: "mapbox://umarmuneer2010.hydrography",
+          minzoom: 11,
+          maxzoom: 13,
         });
         map.addSource("projects-vector", {
           type: "vector",
@@ -181,6 +202,12 @@
           tiles: ["http://localhost:3005/db/project/vt/{z}/{x}/{y}"],
           minzoom: 2,
           maxzoom: 14,
+        });
+        map.addSource("firm-vector", {
+          type: "vector",
+          url: "mapbox://umarmuneer2010.firm",
+          minzoom: 11,
+          maxzoom: 13,
         });
       });
     </script>

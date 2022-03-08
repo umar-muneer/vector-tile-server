@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "layers": {
+    "landcoverz612": {
+      "source": "mapbox://tileset-source/umarmuneer2010/landcoverz612",
+      "minzoom": 6,
+      "maxzoom": 12,
+      "features": {
+        "bbox": [
+          -97.938626340119, 29.3862414798855, -97.5931614957055,
+          29.6145386945022
+        ]
+      }
+    }
+  }
+}
