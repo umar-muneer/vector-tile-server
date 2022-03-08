@@ -12,6 +12,7 @@ const Protobuf = require("pbf");
 const { Pool } = require("pg");
 const SphericalMercator = require("@mapbox/sphericalmercator");
 
+const dataCache = {};
 const pool = new Pool({
   connectionString:
     "postgressql://umar.muneer@conradlabs.com@localhost:5432/staging",
@@ -44,6 +45,15 @@ const getTileIndex = (layerName) => {
     });
   });
 };
+const getReportPartFromDb = async (reportPartId) => {
+  try {
+    const sql = `select feature_collection from report_parts where _id='${reportPartId}'`;
+    const data = await pool.query(sql);
+    return data.rows[0].feature_collection;
+  } catch (err) {
+    throw err;
+  }
+};
 const app = express();
 app.use(async (req, res, next) => {
   try {
@@ -66,6 +76,33 @@ app.use(
     },
   })
 );
+app.get("/in-mem/vt/:z/:x/:y", async (req, res) => {
+  const { z, x, y } = req.params;
+  const { reportPartId } = req.query;
+
+  const featureCollection = dataCache[reportPartId]
+    ? dataCache[reportPartId]
+    : await getReportPartFromDb(reportPartId);
+
+  if (!dataCache[reportPartId]) {
+    dataCache[reportPartId] = featureCollection;
+  }
+  console.time("time to generate index");
+  const tileRepository = geoJsonVt(featureCollection);
+  console.timeEnd("time to generate index");
+  const zNumber = parseInt(z, 10);
+  const xNumber = parseInt(x, 10);
+  const YNumber = parseInt(y, 10);
+  const tile = tileRepository.getTile(zNumber, xNumber, YNumber);
+  if (!tile) {
+    res.status(404).end();
+    return;
+  }
+  const pbfFormat = vtPbf.fromGeojsonVt({ geojsonLayer: tile });
+  const buffer = Buffer.from(pbfFormat);
+  res.set("Content-Type", "application/protobuf");
+  res.send(buffer);
+});
 app.get("/vt/:z/:x/:y", async (req, res) => {
   const { z, x, y } = req.params;
   const layerName = req.query.layer;
