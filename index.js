@@ -124,40 +124,80 @@ app.get("/vt/:z/:x/:y", async (req, res) => {
 });
 app.get("/db/vt/:z/:x/:y", async (req, res) => {
   try {
-    const bbox = mercator.bbox(req.params.x, req.params.y, req.params.z);
-    const sql = `
-    SELECT ST_AsMVT(q, 'hydrography', 4096, 'geometry')
-    FROM (
-      SELECT
-        ST_AsMVTGeom(
-          p.geometry,
-          b.geometry,
-          4096,
-          0,
-          true
-        ) geometry
-      FROM 
-      (
+    const { reportPartId, layer } = req.query;
+    const { z, x, y } = req.params;
+    // const sql = `
+    // SELECT ST_AsMVT(q, 'hydrography', 4096, 'geometry')
+    // FROM (
+    //   SELECT
+    //     ST_AsMVTGeom(
+    //       p.geometry,
+    //       b.geometry,
+    //       4096,
+    //       0,
+    //       true
+    //     ) geometry
+    //   FROM
+    //   (
+    //     SELECT ST_GeomFROMGeoJSON((json_array_elements(feature_collection->'features'))->>'geometry') geometry
+    //       FROM report_parts where report__id='55b07f66-7c23-4cea-ae09-4febef0bd2e4' and type = 'hydrography'
+    //     ) as p,
+    //     (
+    //       SELECT ST_MakeEnvelope($1, $2, $3, $4, $5) as geometry
+    //     ) as b
+    //   WHERE
+    //     ST_Intersects(
+    //       p.geometry,
+    //       b.geometry
+    //     )
+    // ) q`;
+    const sql = `WITH 
+    bounds AS ( 
+        SELECT ST_Transform(ST_TileEnvelope(${z}, ${x}, ${y}), 3857) AS geom
+    ), 
+    geometries AS (
         SELECT ST_GeomFROMGeoJSON((json_array_elements(feature_collection->'features'))->>'geometry') geometry
-          FROM report_parts where report__id='55b07f66-7c23-4cea-ae09-4febef0bd2e4' and type = 'hydrography'
-        ) as p,
-        (
-          SELECT ST_MakeEnvelope($1, $2, $3, $4, $5) as geometry
-        ) as b
-      WHERE 
-        ST_Intersects(
-          p.geometry,
-          b.geometry
-        )
-    ) q`;
-    const data = await pool.query(sql, [...bbox, 4326]);
+       FROM report_parts where _id='${reportPartId}'
+    ), 
+    mvtgeom AS ( 
+        SELECT ST_AsMVTGeom(ST_Transform(g.geometry, 3857),  bounds.geom) AS geom
+        FROM geometries g, bounds 
+        WHERE ST_Transform(g.geometry, 3857) && bounds.geom
+    ) 
+    SELECT ST_AsMVT(mvtgeom.*, '${layer}') FROM mvtgeom
+      `;
+    const data = await pool.query(sql);
     if (data.rows[0].st_asmvt.length === 0) {
       res.status(404);
     }
-    const vectorTile = new VectorTile(new Protobuf(data.rows[0].st_asmvt));
-    const fromVectorTile = vtPbf.fromVectorTileJs(vectorTile);
     res.setHeader("Content-Type", "application/x-protobuf");
-    return res.send(Buffer.from(fromVectorTile));
+    res.send(data.rows[0].st_asmvt);
+  } catch (error) {
+    console.log(error);
+    res.status(500).end();
+  }
+});
+app.get("/db/project/vt/:z/:x/:y", async (req, res) => {
+  try {
+    const { z, x, y } = req.params;
+    const sql = ` WITH 
+    bounds AS ( 
+        SELECT ST_Transform(ST_TileEnvelope(${z}, ${x}, ${y}), 3857) AS geom
+    ), 
+    mvtgeom AS ( 
+        SELECT ST_AsMVTGeom(ST_Transform(p.geometry, 3857),  bounds.geom) AS geom, _id, p.name
+        FROM projects p, bounds 
+        WHERE ST_Transform(p.geometry, 3857) && bounds.geom
+        AND p.deleted_at is null
+    ) 
+    SELECT ST_AsMVT(mvtgeom.*, 'source-layer') FROM mvtgeom
+      `;
+    const data = await pool.query(sql);
+    if (data.rows[0].st_asmvt.length === 0) {
+      res.status(404);
+    }
+    res.setHeader("Content-Type", "application/x-protobuf");
+    res.send(data.rows[0].st_asmvt);
   } catch (error) {
     console.log(error);
     res.status(500).end();

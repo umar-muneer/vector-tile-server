@@ -37,6 +37,9 @@
     </label>
     <label> <input type="checkbox" onchange="toggleHydro(this)" />Hydro </label>
     <label> <input type="checkbox" onchange="toggleSoil(this)" />Soil </label>
+    <label>
+      <input type="checkbox" onchange="toggleProject(this)" />Project
+    </label>
     <div id="map"></div>
     <script>
       const toggleLandCover = (cb) => {
@@ -45,13 +48,12 @@
             id: "test-vector-layer-landcover",
             type: "fill",
             source: "landcover-vector",
-            // "source-layer": "landcover",
-            "source-layer": "geojsonLayer",
+            "source-layer": "landcover",
+            // "source-layer": "geojsonLayer",
             paint: {
               "fill-color": "green",
               "fill-opacity": 0.7,
             },
-            filter: ["==", ["get", "transect_feature_type"], "landcover"],
           });
         } else {
           map.removeLayer("test-vector-layer-landcover");
@@ -63,13 +65,12 @@
             id: "test-vector-layer-hydro",
             type: "fill",
             source: "hydrography-vector",
-            "source-layer": "geojsonLayer",
-            // "source-layer": "hydrography",
+            // "source-layer": "geojsonLayer",
+            "source-layer": "hydrography",
             paint: {
               "fill-color": "red",
               "fill-opacity": 0.7,
             },
-            filter: ["==", ["get", "transect_feature_type"], "hydrography"],
           });
         } else {
           map.removeLayer("test-vector-layer-hydro");
@@ -81,16 +82,32 @@
             id: "test-vector-layer-soil",
             type: "fill",
             source: "soil-vector",
-            // "source-layer": "soil",
-            "source-layer": "geojsonLayer",
+            "source-layer": "soil",
+            // "source-layer": "geojsonLayer",
             paint: {
               "fill-color": "pink",
               "fill-opacity": 0.4,
             },
-            filter: ["==", ["get", "transect_feature_type"], "soil"],
           });
         } else {
           map.removeLayer("test-vector-layer-soil");
+        }
+      };
+      const toggleProject = (cb) => {
+        if (cb.checked) {
+          map.addLayer({
+            id: "project-aoi-layer",
+            source: "projects-vector",
+            type: "line",
+            "source-layer": "source-layer",
+            layout: {},
+            paint: {
+              "line-color": "#c01b1b",
+              "line-width": 3,
+            },
+          });
+        } else {
+          map.removeLayer("project-aoi-layer");
         }
       };
       const aoi = {
@@ -135,7 +152,7 @@
           type: "vector",
           // tiles: ["http://34.65.111.18:3005/vt/{z}/{x}/{y}?layer=landcover"],
           tiles: [
-            "http://localhost:3005/in-mem/vt/{z}/{x}/{y}?layer=landcover&reportPartId=6f9d62b9-5c18-4629-868a-d458eed8539b",
+            "http://localhost:3005/db/vt/{z}/{x}/{y}?layer=landcover&reportPartId=6f9d62b9-5c18-4629-868a-d458eed8539b",
           ],
           minzoom: 2,
           maxzoom: 14,
@@ -144,7 +161,7 @@
           type: "vector",
           // tiles: ["http://34.65.111.18:3005/vt/{z}/{x}/{y}?layer=soil"],
           tiles: [
-            "http://localhost:3005/in-mem/vt/{z}/{x}/{y}?layer=soil&reportPartId=7ff04055-d10f-42d9-b0c1-0af5f8bd66ec",
+            "http://localhost:3005/db/vt/{z}/{x}/{y}?layer=soil&reportPartId=7ff04055-d10f-42d9-b0c1-0af5f8bd66ec",
           ],
           minzoom: 2,
           maxzoom: 14,
@@ -153,8 +170,15 @@
           type: "vector",
           // tiles: ["http://34.65.111.18:3005/vt/{z}/{x}/{y}?layer=hydrography"],
           tiles: [
-            "http://localhost:3005/in-mem/vt/{z}/{x}/{y}?layer=hydrography&reportPartId=b25d6532-2f01-4889-8a93-6b517223c88b",
+            "http://localhost:3005/db/vt/{z}/{x}/{y}?layer=hydrography&reportPartId=b25d6532-2f01-4889-8a93-6b517223c88b",
           ],
+          minzoom: 2,
+          maxzoom: 14,
+        });
+        map.addSource("projects-vector", {
+          type: "vector",
+          // tiles: ["http://34.65.111.18:3005/vt/{z}/{x}/{y}?layer=hydrography"],
+          tiles: ["http://localhost:3005/db/project/vt/{z}/{x}/{y}"],
           minzoom: 2,
           maxzoom: 14,
         });
