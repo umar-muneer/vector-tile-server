@@ -9,7 +9,14 @@ const MbTiles = require("@mapbox/mbtiles");
 const { VectorTile } = require("@mapbox/vector-tile");
 const zlib = require("zlib");
 const Protobuf = require("pbf");
+const { Pool } = require("pg");
+const SphericalMercator = require("@mapbox/sphericalmercator");
 
+const pool = new Pool({
+  connectionString:
+    "postgressql://umar.muneer@conradlabs.com@localhost:5432/staging",
+});
+const mercator = new SphericalMercator();
 const repository = {
   landcover: {},
   hydrography: {},
@@ -76,6 +83,47 @@ app.get("/vt/:z/:x/:y", async (req, res) => {
   } catch (error) {
     console.log(error);
     res.status(500).json("sth went wrong while loading the tile");
+  }
+});
+app.get("/db/vt/:z/:x/:y", async (req, res) => {
+  try {
+    const bbox = mercator.bbox(req.params.x, req.params.y, req.params.z);
+    const sql = `
+    SELECT ST_AsMVT(q, 'hydrography', 4096, 'geometry')
+    FROM (
+      SELECT
+        ST_AsMVTGeom(
+          p.geometry,
+          b.geometry,
+          4096,
+          0,
+          true
+        ) geometry
+      FROM 
+      (
+        SELECT ST_GeomFROMGeoJSON((json_array_elements(feature_collection->'features'))->>'geometry') geometry
+          FROM report_parts where report__id='55b07f66-7c23-4cea-ae09-4febef0bd2e4' and type = 'hydrography'
+        ) as p,
+        (
+          SELECT ST_MakeEnvelope($1, $2, $3, $4, $5) as geometry
+        ) as b
+      WHERE 
+        ST_Intersects(
+          p.geometry,
+          b.geometry
+        )
+    ) q`;
+    const data = await pool.query(sql, [...bbox, 4326]);
+    if (data.rows[0].st_asmvt.length === 0) {
+      res.status(404);
+    }
+    const vectorTile = new VectorTile(new Protobuf(data.rows[0].st_asmvt));
+    const fromVectorTile = vtPbf.fromVectorTileJs(vectorTile);
+    res.setHeader("Content-Type", "application/x-protobuf");
+    return res.send(Buffer.from(fromVectorTile));
+  } catch (error) {
+    console.log(error);
+    res.status(500).end();
   }
 });
 

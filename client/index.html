@@ -130,22 +130,22 @@
         });
         map.addSource("landcover-vector", {
           type: "vector",
-          tiles: ["http://34.65.111.18:3005/vt/{z}/{x}/{y}?layer=landcover"],
-          // tiles: ["http://localhost:3005/vt/{z}/{x}/{y}?layer=landcover"],
+          // tiles: ["http://34.65.111.18:3005/vt/{z}/{x}/{y}?layer=landcover"],
+          tiles: ["http://localhost:3005/vt/{z}/{x}/{y}?layer=landcover"],
           minzoom: 2,
           maxzoom: 14,
         });
         map.addSource("soil-vector", {
           type: "vector",
-          tiles: ["http://34.65.111.18:3005/vt/{z}/{x}/{y}?layer=soil"],
-          // tiles: ["http://localhost:3005/vt/{z}/{x}/{y}?layer=soil"],
+          // tiles: ["http://34.65.111.18:3005/vt/{z}/{x}/{y}?layer=soil"],
+          tiles: ["http://localhost:3005/vt/{z}/{x}/{y}?layer=soil"],
           minzoom: 2,
           maxzoom: 14,
         });
         map.addSource("hydrography-vector", {
           type: "vector",
-          tiles: ["http://34.65.111.18:3005/vt/{z}/{x}/{y}?layer=hydrography"],
-          // tiles: ["http://localhost:3005/vt/{z}/{x}/{y}?layer=hydrography"],
+          // tiles: ["http://34.65.111.18:3005/vt/{z}/{x}/{y}?layer=hydrography"],
+          tiles: ["http://localhost:3005/db/vt/{z}/{x}/{y}?layer=hydrography"],
           minzoom: 2,
           maxzoom: 14,
         });
