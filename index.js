@@ -1,4 +1,5 @@
 const compression = require("compression");
+const { DateTime } = require("luxon");
 const geoJsonVt = require("geojson-vt");
 const vtPbf = require("vt-pbf");
 const express = require("express");
@@ -126,31 +127,6 @@ app.get("/db/vt/:z/:x/:y", async (req, res) => {
   try {
     const { reportPartId, layer } = req.query;
     const { z, x, y } = req.params;
-    // const sql = `
-    // SELECT ST_AsMVT(q, 'hydrography', 4096, 'geometry')
-    // FROM (
-    //   SELECT
-    //     ST_AsMVTGeom(
-    //       p.geometry,
-    //       b.geometry,
-    //       4096,
-    //       0,
-    //       true
-    //     ) geometry
-    //   FROM
-    //   (
-    //     SELECT ST_GeomFROMGeoJSON((json_array_elements(feature_collection->'features'))->>'geometry') geometry
-    //       FROM report_parts where report__id='55b07f66-7c23-4cea-ae09-4febef0bd2e4' and type = 'hydrography'
-    //     ) as p,
-    //     (
-    //       SELECT ST_MakeEnvelope($1, $2, $3, $4, $5) as geometry
-    //     ) as b
-    //   WHERE
-    //     ST_Intersects(
-    //       p.geometry,
-    //       b.geometry
-    //     )
-    // ) q`;
     const sql = `WITH 
     bounds AS ( 
         SELECT ST_Transform(ST_TileEnvelope(${z}, ${x}, ${y}), 3857) AS geom
@@ -166,7 +142,10 @@ app.get("/db/vt/:z/:x/:y", async (req, res) => {
     ) 
     SELECT ST_AsMVT(mvtgeom.*, '${layer}') FROM mvtgeom
       `;
+    const time = DateTime.now().toUnixInteger();
+    console.time(`query-time:${time}`);
     const data = await pool.query(sql);
+    console.timeEnd(`query-time:${time}`);
     if (data.rows[0].st_asmvt.length === 0) {
       res.status(404);
     }
