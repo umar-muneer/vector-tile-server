@@ -12,6 +12,7 @@
   "dependencies": {
     "@mapbox/mbtiles": "^0.12.1",
     "@mapbox/sphericalmercator": "^1.2.0",
+    "@naturalatlas/mapbox-gl-native": "^1.0.2",
     "compression": "^1.7.4",
     "express": "^4.17.3",
     "geojson-vt": "^3.2.1",

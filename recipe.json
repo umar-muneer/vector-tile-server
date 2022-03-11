@@ -2,13 +2,13 @@
   "version": 1,
   "layers": {
     "landcoverz612": {
-      "source": "mapbox://tileset-source/umarmuneer2010/landcoverz612",
+      "source": "mapbox://tileset-source/umarmuneer2010/atp-landcoverz612",
       "minzoom": 6,
       "maxzoom": 12,
       "features": {
         "bbox": [
-          -97.938626340119, 29.3862414798855, -97.5931614957055,
-          29.6145386945022
+          -98.50689136898022, 29.420231382053863, -98.49563248663313,
+          29.430862865616263
         ]
       }
     }
