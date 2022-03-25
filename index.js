@@ -10,15 +10,10 @@ const MbTiles = require("@mapbox/mbtiles");
 const { VectorTile } = require("@mapbox/vector-tile");
 const zlib = require("zlib");
 const Protobuf = require("pbf");
-const { Pool } = require("pg");
-const SphericalMercator = require("@mapbox/sphericalmercator");
 
+const { Storage } = require("@google-cloud/storage");
+const storage = new Storage();
 const dataCache = {};
-const pool = new Pool({
-  connectionString:
-    "postgressql://umar.muneer@conradlabs.com@localhost:5432/staging",
-});
-const mercator = new SphericalMercator();
 const repository = {
   landcover: {},
   hydrography: {},
@@ -202,6 +197,25 @@ app.get("/landcover", (req, res) => {
 
 app.get("/health", (req, res) => {
   res.json("OK");
+});
+
+app.get("/measure-download-times", async (req, res) => {
+  try {
+    console.log("received request to download a tile");
+    console.time("download-time");
+    await storage
+      .bucket("transect-vector-tile-testing")
+      .file("landcover.mbtiles")
+      .download({
+        destination: "./reportParts/from-s3-landcover",
+      });
+    console.timeEnd("download-time");
+    console.log("finished request to download a tile");
+    res.json("OK");
+  } catch (error) {
+    console.log(error, "!!!");
+    res.status(500).json(error);
+  }
 });
 
 /**
