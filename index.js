@@ -58,9 +58,15 @@ const getReportPartFromDb = async (reportPartId) => {
 const app = express();
 app.use(async (req, res, next) => {
   try {
+    console.time("time to build tileindex for landcover");
     repository.landcover = await getTileIndex("landcover");
+    console.timeEnd("time to build tileindex for landcover");
+    console.time("time to build tileindex for soil");
     repository.soil = await getTileIndex("soil");
+    console.timeEnd("time to build tileindex for soil");
+    console.time("time to build tileIndex for hydro");
     repository.hydrography = await getTileIndex("hydrography");
+    console.timeEnd("time to build tileIndex for hydro");
     next();
   } catch (err) {
     console.log(err);
